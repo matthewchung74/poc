@@ -99,23 +99,46 @@ final class DeepSeekChatViewModel: ObservableObject {
 
     func send() async {
         let text = inputText.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !text.isEmpty, !isLoading, !isSending, let session = chatSession else { return }
+        guard !text.isEmpty, !isLoading, !isSending else {
+            print("⚠️ Skipping send: empty=\(!text.isEmpty), loading=\(isLoading), sending=\(isSending)")
+            return
+        }
+
+        guard let session = chatSession else {
+            print("✗ Error: chatSession is nil!")
+            messages.append(ChatMessage(
+                isUser: false,
+                text: "Error: Model not loaded. Please restart the app."
+            ))
+            return
+        }
+
         inputText = ""
         isSending = true
 
-        messages.append(ChatMessage(isUser: true, text: text))
+        // Add user message
+        let userMessage = ChatMessage(isUser: true, text: text)
+        messages.append(userMessage)
+        print("📤 User: \(text)")
 
         do {
             // Use MLX to generate response
-            print("Generating response for: \(text)")
+            print("🤖 Generating response...")
             let response = try await session.respond(to: text)
-            messages.append(ChatMessage(isUser: false, text: response))
-            print("✓ Generated response: \(response.prefix(50))...")
+
+            // Add assistant message
+            let assistantMessage = ChatMessage(isUser: false, text: response)
+            messages.append(assistantMessage)
+            print("✓ Response generated: \(response.prefix(100))...")
+
         } catch {
             print("✗ Error generating response: \(error)")
+            print("   Error type: \(type(of: error))")
+            print("   Error description: \(error.localizedDescription)")
+
             messages.append(ChatMessage(
                 isUser: false,
-                text: "Error: \(error.localizedDescription)"
+                text: "Error generating response: \(error.localizedDescription)\n\nPlease check Xcode console for details."
             ))
         }
 
