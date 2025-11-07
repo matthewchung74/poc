@@ -84,9 +84,9 @@ final class DeepSeekChatViewModel: ObservableObject {
 
                 // Configure generation parameters to prevent hanging
                 let generateParams = GenerateParameters(
+                    maxTokens: 256,  // Limit response length
                     temperature: 0.7,
-                    topP: 0.9,
-                    maxTokens: 256  // Limit response length
+                    topP: 0.9
                 )
 
                 self.chatSession = ChatSession(container, generateParameters: generateParams)
