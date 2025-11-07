@@ -2,6 +2,14 @@
 
 An iOS app that runs a custom DeepSeek V3 language model (109M parameters) on-device using Apple's MLX framework.
 
+## ⚠️ Important Note
+
+**This model is undertrained and produces low-quality output.** It's a proof-of-concept demonstrating the DeepSeek V3 architecture and MLX integration on iOS. The model generates text but it's not coherent - this is expected for a 109M parameter model trained on limited data.
+
+**For production use**, replace with a properly trained model from [MLX Community](https://huggingface.co/mlx-community) like:
+- `Qwen3-4B-4bit` (better quality, 4GB)
+- `Llama-3.2-1B-4bit` (good quality, 1GB)
+
 ## Features
 
 - ✅ On-device inference with Metal GPU acceleration
@@ -10,6 +18,7 @@ An iOS app that runs a custom DeepSeek V3 language model (109M parameters) on-de
 - ✅ Mixture of Experts (MoE) with 8 experts
 - ✅ Chat interface with SwiftUI
 - ✅ No external API calls - completely private
+- ⚠️ Output quality: Educational/demonstration purposes only
 
 ## Requirements
 
