@@ -1,0 +1,10 @@
+{
+  "source_file": "model_weights/best_deepseek_v3.pt",
+  "num_layers": 8,
+  "num_experts": 8,
+  "routed_intermediate_size": 512,
+  "shared_intermediate_size": 768,
+  "unified_intermediate_size": 768,
+  "total_weights": 139,
+  "padding_applied": true
+}

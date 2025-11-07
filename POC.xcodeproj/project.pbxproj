@@ -6,13 +6,34 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E91B8B8D2EBDB4D000E5507C /* MLXEmbedders in Frameworks */ = {isa = PBXBuildFile; productRef = E91B8B8C2EBDB4D000E5507C /* MLXEmbedders */; };
+		E91B8B8F2EBDB4D000E5507C /* MLXLLM in Frameworks */ = {isa = PBXBuildFile; productRef = E91B8B8E2EBDB4D000E5507C /* MLXLLM */; };
+		E91B8B912EBDB4D000E5507C /* MLXLMCommon in Frameworks */ = {isa = PBXBuildFile; productRef = E91B8B902EBDB4D000E5507C /* MLXLMCommon */; };
+		E91B8B932EBDB4D000E5507C /* MLXMNIST in Frameworks */ = {isa = PBXBuildFile; productRef = E91B8B922EBDB4D000E5507C /* MLXMNIST */; };
+		E91B8B952EBDB4D000E5507C /* MLXVLM in Frameworks */ = {isa = PBXBuildFile; productRef = E91B8B942EBDB4D000E5507C /* MLXVLM */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		E91B8B6D2EBD8B0600E5507C /* POC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E91B8B8B2EBDB2F200E5507C /* Exceptions for "POC" folder in "POC" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E91B8B6C2EBD8B0600E5507C /* POC */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E91B8B6F2EBD8B0600E5507C /* POC */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E91B8B8B2EBDB2F200E5507C /* Exceptions for "POC" folder in "POC" target */,
+			);
 			path = POC;
 			sourceTree = "<group>";
 		};
@@ -23,6 +44,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91B8B952EBDB4D000E5507C /* MLXVLM in Frameworks */,
+				E91B8B932EBDB4D000E5507C /* MLXMNIST in Frameworks */,
+				E91B8B8F2EBDB4D000E5507C /* MLXLLM in Frameworks */,
+				E91B8B912EBDB4D000E5507C /* MLXLMCommon in Frameworks */,
+				E91B8B8D2EBDB4D000E5507C /* MLXEmbedders in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +91,11 @@
 			);
 			name = POC;
 			packageProductDependencies = (
+				E91B8B8C2EBDB4D000E5507C /* MLXEmbedders */,
+				E91B8B8E2EBDB4D000E5507C /* MLXLLM */,
+				E91B8B902EBDB4D000E5507C /* MLXLMCommon */,
+				E91B8B922EBDB4D000E5507C /* MLXMNIST */,
+				E91B8B942EBDB4D000E5507C /* MLXVLM */,
 			);
 			productName = POC;
 			productReference = E91B8B6D2EBD8B0600E5507C /* POC.app */;
@@ -94,6 +125,9 @@
 			);
 			mainGroup = E91B8B642EBD8B0600E5507C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E91B8B892EBDB1E200E5507C /* XCRemoteSwiftPackageReference "mlx-swift-examples" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E91B8B6E2EBD8B0600E5507C /* Products */;
 			projectDirPath = "";
@@ -256,11 +290,13 @@
 				DEVELOPMENT_TEAM = L23L25C7H9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = POC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -288,11 +324,13 @@
 				DEVELOPMENT_TEAM = L23L25C7H9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = POC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,6 +370,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E91B8B892EBDB1E200E5507C /* XCRemoteSwiftPackageReference "mlx-swift-examples" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ml-explore/mlx-swift-examples";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.29.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E91B8B8C2EBDB4D000E5507C /* MLXEmbedders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E91B8B892EBDB1E200E5507C /* XCRemoteSwiftPackageReference "mlx-swift-examples" */;
+			productName = MLXEmbedders;
+		};
+		E91B8B8E2EBDB4D000E5507C /* MLXLLM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E91B8B892EBDB1E200E5507C /* XCRemoteSwiftPackageReference "mlx-swift-examples" */;
+			productName = MLXLLM;
+		};
+		E91B8B902EBDB4D000E5507C /* MLXLMCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E91B8B892EBDB1E200E5507C /* XCRemoteSwiftPackageReference "mlx-swift-examples" */;
+			productName = MLXLMCommon;
+		};
+		E91B8B922EBDB4D000E5507C /* MLXMNIST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E91B8B892EBDB1E200E5507C /* XCRemoteSwiftPackageReference "mlx-swift-examples" */;
+			productName = MLXMNIST;
+		};
+		E91B8B942EBDB4D000E5507C /* MLXVLM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E91B8B892EBDB1E200E5507C /* XCRemoteSwiftPackageReference "mlx-swift-examples" */;
+			productName = MLXVLM;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E91B8B652EBD8B0600E5507C /* Project object */;
 }

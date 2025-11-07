@@ -1,0 +1,9 @@
+{
+  "tokenizer_class": "PreTrainedTokenizer",
+  "tokenizer_type": "gpt2",
+  "vocab_size": 50257,
+  "model_max_length": 1024,
+  "bos_token": "<|endoftext|>",
+  "eos_token": "<|endoftext|>",
+  "unk_token": "<|endoftext|>"
+}
