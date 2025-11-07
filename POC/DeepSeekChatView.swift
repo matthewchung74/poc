@@ -81,7 +81,15 @@ final class DeepSeekChatViewModel: ObservableObject {
                 }
 
                 self.modelContainer = container
-                self.chatSession = ChatSession(container)
+
+                // Configure generation parameters to prevent hanging
+                let generateParams = GenerateParameters(
+                    temperature: 0.7,
+                    topP: 0.9,
+                    maxTokens: 256  // Limit response length
+                )
+
+                self.chatSession = ChatSession(container, generateParameters: generateParams)
                 self.isLoading = false
                 self.messages = [ChatMessage(isUser: false, text: "DeepSeek V3 is ready! I'm a 109M parameter model with MoE architecture. Ask me anything!")]
                 print("✓ DeepSeek model loaded successfully!")

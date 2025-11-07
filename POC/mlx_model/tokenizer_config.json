@@ -5,5 +5,6 @@
   "model_max_length": 1024,
   "bos_token": "<|endoftext|>",
   "eos_token": "<|endoftext|>",
-  "unk_token": "<|endoftext|>"
+  "unk_token": "<|endoftext|>",
+  "chat_template": "{% for message in messages %}{% if message['role'] == 'user' %}{{ message['content'] }}{% elif message['role'] == 'assistant' %}{{ message['content'] }}{% endif %}{% endfor %}"
 }
